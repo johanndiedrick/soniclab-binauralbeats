@@ -2,7 +2,7 @@
 
 ### Sonic Lab
 ### Friday March 6, 2015 | 7:30pm - 9:30pm EST
-### >Where: Interactive Telecommunications Program, 721 Broadway, New York, 
+### Interactive Telecommunications Program, 721 Broadway, New York, 
 
 ## Description
 
@@ -42,10 +42,13 @@ Other things we will be doing:
 
 ### Order of tasks 
 
--Create our AudioUnit
--Create our oscillator class
--Render our sound
--Create our UI and other niceties
+* Create our AudioUnit
+
+* Create our oscillator class
+
+* Render our sound
+
+* Create our UI and other niceties
 
 ## To Do
 
