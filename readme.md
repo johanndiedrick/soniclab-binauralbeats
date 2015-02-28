@@ -36,8 +36,6 @@ During the workshop, we're going to work from a template project, where you can 
 
 	b) Describe and create out AudioUnit
 
-* Other things we will be doing:
-
 	c) Creating a synthesizer class
 
 	d) Setting up a simple UI
