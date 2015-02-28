@@ -19,8 +19,13 @@
 
 OSStatus renderAudioOutput (void *inRefCon,AudioUnitRenderActionFlags *ioActionFlags,  const AudioTimeStamp *inTimeStamp,  UInt32 inBusNumber, UInt32 inNumberFrames,  AudioBufferList *ioData);
 
+//oscillators
+SLOscillator* oscillatorLeft;
+SLOscillator* oscillatorRight;
+
 @interface SLAudioController : NSObject{
     AudioComponentInstance outputUnit;
+
 }
 
 //helper functions
@@ -28,5 +33,13 @@ OSStatus renderAudioOutput (void *inRefCon,AudioUnitRenderActionFlags *ioActionF
 -(void)startAudioUnit;
 -(void)togglePlayback;
 -(void)createOscillators;
+
+//changing oscillator frequency
+-(void)changeChannelLFrequency:(float)frequency;
+-(void)changeChannelRFrequency:(float)frequency;
+-(void)randomBinaural;
+-(int)getRandomNumberBetween:(int)from to:(int)to;
+
+
 
 @end

@@ -20,9 +20,6 @@ float* preBufferOutputR = nil;
 
 bool playback;
 
-//oscillators
-SLOscillator* oscillatorLeft = nil;
-SLOscillator* oscillatorRight = nil;
 
 
 //render our output
@@ -130,4 +127,31 @@ OSStatus renderAudioOutput(void *inRefCon, AudioUnitRenderActionFlags *ioActionF
     [oscillatorRight setType:sineWave];
     [oscillatorRight setVolume:0.25];
 }
+
+
+-(void)changeChannelLFrequency:(float)frequency{
+    [oscillatorLeft setFrequency:frequency];
+}
+
+-(void)changeChannelRFrequency:(float)frequency{
+    [oscillatorRight setFrequency:frequency];
+}
+
+-(void)randomBinaural{
+    
+    int leftFrequency = [self getRandomNumberBetween:60 to:600];
+    int rightFrequency = leftFrequency - [self getRandomNumberBetween:1 to:30];
+    
+    [oscillatorLeft setFrequency:leftFrequency];
+    [oscillatorRight setFrequency:rightFrequency];
+
+}
+
+-(int)getRandomNumberBetween:(int)from to:(int)to {
+    
+    return (int)from + arc4random() % (to-from+1);
+}
+
+
+
 @end
