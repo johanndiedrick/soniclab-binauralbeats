@@ -1,7 +1,14 @@
-iOS project for Sonic Lab - Binaural Beats workshop
+# iOS project for Sonic Lab - Binaural Beats workshop
 
+## Setting up you iOS Developer account
 
-Instructions:
+1) Ask all those interested to send us their email address. We can then send it to Marlon so he can send them invitations to the ITP iOS dev account
+
+2) Have each student tell us what kind of device they have (iPhone, iPod or iPad), and their device's UDID. Instructions can be found here:
+
+http://www.macworld.co.uk/how-to/iphone/how-find-out-your-iphone-or-ipad-udid-3530239/
+
+## Instructions:
 
 Download/clone repo
 
@@ -9,7 +16,7 @@ Add CoreAudio Framework
 
 Create our SLAudioController Class
 
--Based on NSObject
+- Based on NSObject
 
 Import AudioUnit Headers
 
@@ -25,20 +32,20 @@ Other things we will be doing:
 
 4) Setting up a simple UI
 
-Order of tasks:
+### Order of tasks 
 
 -Create our AudioUnit
 -Create our oscillator class
 -Render our sound
 -Create our UI and other niceties
 
+## To Do
 
-To Do:
+* Comment every line of code
 
-- Comment every line of code
+* Make a "finished" branch for reference and an "unfinished" branch to be used at the workshop
 
-- Make a "finished" branch for reference and an "unfinished" branch to be used at the workshop
-References:
+## References
 
 https://github.com/zebpedersen/CAController
 
