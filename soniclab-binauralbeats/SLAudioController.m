@@ -18,57 +18,12 @@ float* bufferR;
 float* preBufferOutputL = nil;
 float* preBufferOutputR = nil;
 
-float* render_output_left = nil;
-float* render_output_right = nil;
-
 bool playback;
 
-//osc left
+//oscillators
+SLOscillator* oscillatorLeft = nil;
+SLOscillator* oscillatorRight = nil;
 
-double phaseL = 0.0f;
-double frequencyL = 440.0f;
-double osc_outputL = 0.0f;
-
-//osc right
-double phaseR = 0.0f;
-double frequencyR = 450.0f;
-double osc_outputR = 0.0f;
-
-//temporary render functinons for our oscilators
-float* outputL(){
-    render_output_left[0] = 0.0f;
-    render_output_left[1] = 0.0f;
-    
-    osc_outputL = sin(phaseL*(TWOPI));
-    
-    if (phaseL>=1.0) {
-        phaseL-=1.0;
-    }
-    
-    phaseL += (1.0/(sampleRate/frequencyL));
-               
-    render_output_left[0] = render_output_left[1] = osc_outputL;
-    //NSLog(@"output");
-
-    return render_output_left;
-}
-
-float* outputR(){
-    render_output_right[0] = 0.0f;
-    render_output_right[1] = 0.0f;
-    
-    osc_outputR = sin(phaseR*(TWOPI));
-    
-    if (phaseR>=1.0) {
-        phaseR-=1.0;
-    }
-    
-    phaseR += (1.0/(sampleRate/frequencyR));
-    
-    render_output_right[0] = render_output_right[1] = osc_outputR;
-    
-    return render_output_right;
-}
 
 //render our output
 OSStatus renderAudioOutput(void *inRefCon, AudioUnitRenderActionFlags *ioActionFlags, const AudioTimeStamp *inTimeStamp, UInt32 inBusNumber, UInt32 inNumberFrames, AudioBufferList *ioData){
@@ -80,20 +35,18 @@ OSStatus renderAudioOutput(void *inRefCon, AudioUnitRenderActionFlags *ioActionF
     
     for (UInt32 i =0; i< inNumberFrames; i++) {
         if (playback) {
-            preBufferOutputL = outputL();
-            preBufferOutputR = outputR();
+            
+            preBufferOutputL = [oscillatorLeft getSine];
+            preBufferOutputR = [oscillatorRight getSine];
         }
         
         bufferL[i] = preBufferOutputL[0];
         bufferR[i] = preBufferOutputR[0];
         
-        //NSLog(@"%f", bufferL[i]);
-
     }
     
     return noErr;
-    
-    
+
 }
 
 @implementation SLAudioController
@@ -103,9 +56,6 @@ OSStatus renderAudioOutput(void *inRefCon, AudioUnitRenderActionFlags *ioActionF
     //allocate memory for our prebuffers and render output
     preBufferOutputL = (float*) malloc(sizeof(float*[2]));
     preBufferOutputR = (float*) malloc(sizeof(float*[2]));
-    render_output_left = (float*) malloc(sizeof(float*[2]));
-    render_output_right = (float*) malloc(sizeof(float*[2]));
-    
     
     //configure the search parameters to find the default playback output unit
     //kAudioUnitSubType_RemoteIO on iOS, kAudioUnitSubType_DefaultOutput on Mac OS X
@@ -121,11 +71,9 @@ OSStatus renderAudioOutput(void *inRefCon, AudioUnitRenderActionFlags *ioActionF
     AudioComponent defaultOutput = AudioComponentFindNext(NULL,
                                                           &defaultOutputDescription);
     NSAssert(defaultOutput, @"Can't find default output!");
-
     
     OSErr err = AudioComponentInstanceNew(defaultOutput, &outputUnit);
-    //NSAssert1(outputUnit, @"Error creating unit: %hd", err);
-
+    NSAssert1(outputUnit, @"Error creating unit: %hd", err);
     
     AURenderCallbackStruct renderCallbackStruct;
     renderCallbackStruct.inputProc = renderAudioOutput; // our audio controller will use our render output function
@@ -138,8 +86,7 @@ OSStatus renderAudioOutput(void *inRefCon, AudioUnitRenderActionFlags *ioActionF
                                &renderCallbackStruct,
                                sizeof(renderCallbackStruct));
     
-    //NSAssert1(err == noErr, @"Error setting callback: %hd", err);
-
+    NSAssert1(err == noErr, @"Error setting callback: %hd", err);
     
     const int four_bytes_per_float = 4;
     const int eight_bytes_per_float = 8;
@@ -157,7 +104,6 @@ OSStatus renderAudioOutput(void *inRefCon, AudioUnitRenderActionFlags *ioActionF
     err = AudioUnitSetProperty(outputUnit, kAudioUnitProperty_StreamFormat, kAudioUnitScope_Input, 0, &format, sizeof(format));
     
     //NSAssert1(err == noErr, @"Error setting stream format: %hd", err); // = != == ...
-
     
 }
 
@@ -169,6 +115,19 @@ OSStatus renderAudioOutput(void *inRefCon, AudioUnitRenderActionFlags *ioActionF
 
 -(void)togglePlayback{
     playback = !playback;
-    NSLog(@"toggling playback");
+}
+
+-(void)createOscillators{
+    oscillatorLeft = [[SLOscillator alloc] init];
+    [oscillatorLeft setup:sampleRate];
+    [oscillatorLeft setFrequency:450.0];
+    [oscillatorLeft setType:sineWave];
+    [oscillatorLeft setVolume:0.25];
+
+    oscillatorRight = [[SLOscillator alloc] init];
+    [oscillatorRight setup:sampleRate];
+    [oscillatorRight setFrequency:440.0];
+    [oscillatorRight setType:sineWave];
+    [oscillatorRight setVolume:0.25];
 }
 @end

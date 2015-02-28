@@ -19,6 +19,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     audioController = [[SLAudioController alloc] init];
+    [audioController createOscillators];
     [audioController initAudioController];
     [audioController startAudioUnit];
     

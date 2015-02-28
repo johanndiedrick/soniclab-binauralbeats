@@ -14,6 +14,9 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <AudioUnit/AudioUnit.h>
 
+//import oscillators
+#import "SLOscillator.h"
+
 OSStatus renderAudioOutput (void *inRefCon,AudioUnitRenderActionFlags *ioActionFlags,  const AudioTimeStamp *inTimeStamp,  UInt32 inBusNumber, UInt32 inNumberFrames,  AudioBufferList *ioData);
 
 @interface SLAudioController : NSObject{
@@ -24,5 +27,6 @@ OSStatus renderAudioOutput (void *inRefCon,AudioUnitRenderActionFlags *ioActionF
 -(void)initAudioController;
 -(void)startAudioUnit;
 -(void)togglePlayback;
+-(void)createOscillators;
 
 @end

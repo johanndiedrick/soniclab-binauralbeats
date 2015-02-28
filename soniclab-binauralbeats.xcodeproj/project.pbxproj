@@ -16,6 +16,7 @@
 		8E38FDC61A9D703A00A6C2C6 /* soniclab_binauralbeatsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E38FDC51A9D703A00A6C2C6 /* soniclab_binauralbeatsTests.m */; };
 		8E84765A1AA13A1B00EA17CD /* SLAudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8476591AA13A1B00EA17CD /* SLAudioController.m */; };
 		8E84765E1AA173C400EA17CD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E84765D1AA173C400EA17CD /* AudioToolbox.framework */; };
+		8ED70C1A1AA2541100947322 /* SLOscillator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED70C191AA2541100947322 /* SLOscillator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		8E8476581AA13A1B00EA17CD /* SLAudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAudioController.h; sourceTree = "<group>"; };
 		8E8476591AA13A1B00EA17CD /* SLAudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAudioController.m; sourceTree = "<group>"; };
 		8E84765D1AA173C400EA17CD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8ED70C181AA2541100947322 /* SLOscillator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLOscillator.h; sourceTree = "<group>"; };
+		8ED70C191AA2541100947322 /* SLOscillator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLOscillator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				8E38FDB11A9D703A00A6C2C6 /* ViewController.m */,
 				8E8476581AA13A1B00EA17CD /* SLAudioController.h */,
 				8E8476591AA13A1B00EA17CD /* SLAudioController.m */,
+				8ED70C181AA2541100947322 /* SLOscillator.h */,
+				8ED70C191AA2541100947322 /* SLOscillator.m */,
 				8E38FDB31A9D703A00A6C2C6 /* Main.storyboard */,
 				8E38FDB61A9D703A00A6C2C6 /* Images.xcassets */,
 				8E38FDB81A9D703A00A6C2C6 /* LaunchScreen.xib */,
@@ -231,6 +236,7 @@
 				8E38FDB21A9D703A00A6C2C6 /* ViewController.m in Sources */,
 				8E38FDAF1A9D703A00A6C2C6 /* AppDelegate.m in Sources */,
 				8E38FDAC1A9D703A00A6C2C6 /* main.m in Sources */,
+				8ED70C1A1AA2541100947322 /* SLOscillator.m in Sources */,
 				8E84765A1AA13A1B00EA17CD /* SLAudioController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
