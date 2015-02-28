@@ -53,3 +53,15 @@ http://stackoverflow.com/questions/25844415/ios-audio-unit-how-to-create-stereo-
 http://stackoverflow.com/questions/14466371/ios-generate-and-play-indefinite-simple-audio-sine-wave
 
 http://stackoverflow.com/questions/10823322/control-mono-playback-output-with-core-audio
+
+http://en.wikipedia.org/wiki/Binaural_beats
+
+http://lists.apple.com/archives/coreaudio-api/2011/Feb/msg00069.html
+
+http://stackoverflow.com/questions/14391398/ios-core-audio-render-callback-works-on-simulator-not-on-device
+
+http://stackoverflow.com/questions/6143107/compiler-error-initializer-element-is-not-a-compile-time-constant
+
+http://stackoverflow.com/questions/22221948/use-of-undeclared-identifier-objective-c-code
+
+http://publications.gbdirect.co.uk/c_book/chapter5/sizeof_and_malloc.html

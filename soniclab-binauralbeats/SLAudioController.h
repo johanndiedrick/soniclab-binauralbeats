@@ -5,6 +5,8 @@
 //  Created by Johann Diedrick on 2/27/15.
 //  Copyright (c) 2015 Johann Diedrick. All rights reserved.
 //
+// Referenced from https://github.com/zebpedersen/CAController
+//
 
 #import <Foundation/Foundation.h>
 
