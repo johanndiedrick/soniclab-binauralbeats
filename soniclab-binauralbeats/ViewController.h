@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SLAudioController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+    SLAudioController *audioController;
+}
 
 
 @end

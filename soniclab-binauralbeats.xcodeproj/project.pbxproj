@@ -14,6 +14,8 @@
 		8E38FDB71A9D703A00A6C2C6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E38FDB61A9D703A00A6C2C6 /* Images.xcassets */; };
 		8E38FDBA1A9D703A00A6C2C6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E38FDB81A9D703A00A6C2C6 /* LaunchScreen.xib */; };
 		8E38FDC61A9D703A00A6C2C6 /* soniclab_binauralbeatsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E38FDC51A9D703A00A6C2C6 /* soniclab_binauralbeatsTests.m */; };
+		8E84765A1AA13A1B00EA17CD /* SLAudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8476591AA13A1B00EA17CD /* SLAudioController.m */; };
+		8E84765E1AA173C400EA17CD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E84765D1AA173C400EA17CD /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		8E38FDBF1A9D703A00A6C2C6 /* soniclab-binauralbeatsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "soniclab-binauralbeatsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E38FDC41A9D703A00A6C2C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E38FDC51A9D703A00A6C2C6 /* soniclab_binauralbeatsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = soniclab_binauralbeatsTests.m; sourceTree = "<group>"; };
+		8E8476581AA13A1B00EA17CD /* SLAudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAudioController.h; sourceTree = "<group>"; };
+		8E8476591AA13A1B00EA17CD /* SLAudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAudioController.m; sourceTree = "<group>"; };
+		8E84765D1AA173C400EA17CD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E84765E1AA173C400EA17CD /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,7 @@
 		8E38FD9D1A9D703A00A6C2C6 = {
 			isa = PBXGroup;
 			children = (
+				8E84765D1AA173C400EA17CD /* AudioToolbox.framework */,
 				8E38FDA81A9D703A00A6C2C6 /* soniclab-binauralbeats */,
 				8E38FDC21A9D703A00A6C2C6 /* soniclab-binauralbeatsTests */,
 				8E38FDA71A9D703A00A6C2C6 /* Products */,
@@ -85,6 +92,8 @@
 				8E38FDAE1A9D703A00A6C2C6 /* AppDelegate.m */,
 				8E38FDB01A9D703A00A6C2C6 /* ViewController.h */,
 				8E38FDB11A9D703A00A6C2C6 /* ViewController.m */,
+				8E8476581AA13A1B00EA17CD /* SLAudioController.h */,
+				8E8476591AA13A1B00EA17CD /* SLAudioController.m */,
 				8E38FDB31A9D703A00A6C2C6 /* Main.storyboard */,
 				8E38FDB61A9D703A00A6C2C6 /* Images.xcassets */,
 				8E38FDB81A9D703A00A6C2C6 /* LaunchScreen.xib */,
@@ -222,6 +231,7 @@
 				8E38FDB21A9D703A00A6C2C6 /* ViewController.m in Sources */,
 				8E38FDAF1A9D703A00A6C2C6 /* AppDelegate.m in Sources */,
 				8E38FDAC1A9D703A00A6C2C6 /* main.m in Sources */,
+				8E84765A1AA13A1B00EA17CD /* SLAudioController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +424,7 @@
 				8E38FDCB1A9D703A00A6C2C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E38FDCC1A9D703A00A6C2C6 /* Build configuration list for PBXNativeTarget "soniclab-binauralbeatsTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +433,7 @@
 				8E38FDCE1A9D703A00A6C2C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
