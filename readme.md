@@ -1,10 +1,18 @@
-# iOS project for Sonic Lab - Binaural Beats workshop
+# Binaural Beats on iOS Workshop
+
+### Sonic Lab
+### Friday March 6, 2015 | 7:30pm - 9:30pm EST
+### >Where: Interactive Telecommunications Program, 721 Broadway, New York, 
+
+## Description
+
+In this 2-hour iOS workshop, we will create a simple application for creating binaural beats. There will be a super quick introduction to binaural beats, followed by an introduction to iOS development and Core Audio, the foundational framework for digital audio on iOS and OS X. We will touch on creating interfaces and classes, as well as walk through some fundamental concepts for generating digital audio. Having taken ICM should be more than enough to keep up. Having a iOS Developer Account is required to build the application on your phone. You should be able to build in the iOS Simulator without an iOS developer account however.
 
 ## Setting up you iOS Developer account
 
-1) Ask all those interested to send us their email address. We can then send it to Marlon so he can send them invitations to the ITP iOS dev account
+1) Send Marlon <me42@nyu.edu> or T.K. <tkbroderick@gmail.com> your email address.
 
-2) Have each student tell us what kind of device they have (iPhone, iPod or iPad), and their device's UDID. Instructions can be found here:
+2) In the email, tell them what kind of device you have (iPhone, iPod or iPad), and the device's UDID. Instructions on finding your devices UDID can be found here:
 
 http://www.macworld.co.uk/how-to/iphone/how-find-out-your-iphone-or-ipad-udid-3530239/
 
