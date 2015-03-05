@@ -48,10 +48,38 @@
     return render_output;    
 }
 
+-(void)updateWaveform:(int)waveFormResolution{
+    _waveform = [[NSMutableArray alloc] init];
+    
+    for (int i =0; i<waveFormResolution; i++) {
+        [_waveform addObject:[NSNumber numberWithFloat:0.0]];
+    }
+    
+    float waveformStep = (M_PI * 2.) / (float)[_waveform count];
+    for (int i=0; i<[_waveform count]; i++ ){
+        [_waveform setObject:[NSNumber numberWithFloat:(float)sin(i*waveformStep)] atIndexedSubscript:i];
+    }
+}
 
--(double)getWaveTableSample{
-    //...
-    return 0.0;
+-(float*)getWavetableSample{
+    render_output[0] = 0.0f;
+    render_output[1] = 0.0f;
+
+    int waveformIndex = (int)(phase * [_waveform count]) % [_waveform count];
+
+    osc_output = [[_waveform objectAtIndex:waveformIndex] floatValue];
+    
+    
+    if (phase>=2.0) {
+        phase-=2.0;
+    }
+    
+    phase += (2.0/(sampleRate/frequency));
+
+    
+    render_output[0] = render_output[1] = osc_output;
+
+    return render_output;
 }
 
 -(float)getFrequency{

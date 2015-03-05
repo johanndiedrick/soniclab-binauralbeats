@@ -13,7 +13,7 @@ const Float64 sampleRate = 44100.0;
 double TWOPI = 2*M_PI;
 float* bufferL;
 float* bufferR;
-
+int waveformResolution = 1024;
 //things for oscillators, will move into class later
 float* preBufferOutputL = nil;
 float* preBufferOutputR = nil;
@@ -33,8 +33,8 @@ OSStatus renderAudioOutput(void *inRefCon, AudioUnitRenderActionFlags *ioActionF
     for (UInt32 i =0; i< inNumberFrames; i++) {
         if (playback) {
             
-            preBufferOutputL = [oscillatorLeft getSine];
-            preBufferOutputR = [oscillatorRight getSine];
+            preBufferOutputL = [oscillatorLeft getWavetableSample];
+            preBufferOutputR = [oscillatorRight getWavetableSample];
         }
         
         bufferL[i] = preBufferOutputL[0];
@@ -120,12 +120,15 @@ OSStatus renderAudioOutput(void *inRefCon, AudioUnitRenderActionFlags *ioActionF
     [oscillatorLeft setFrequency:450.0];
     [oscillatorLeft setType:sineWave];
     [oscillatorLeft setVolume:0.25];
+    [oscillatorLeft updateWaveform:waveformResolution];
 
     oscillatorRight = [[SLOscillator alloc] init];
     [oscillatorRight setup:sampleRate];
     [oscillatorRight setFrequency:440.0];
     [oscillatorRight setType:sineWave];
     [oscillatorRight setVolume:0.25];
+    [oscillatorRight updateWaveform:waveformResolution];
+
 }
 
 
