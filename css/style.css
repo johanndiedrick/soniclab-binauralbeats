@@ -1,3 +1,7 @@
 .topic{
 	height: 800px;
 }
+
+p.topic{
+	font-size: 36px;
+}
