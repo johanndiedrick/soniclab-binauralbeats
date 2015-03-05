@@ -13,6 +13,13 @@
     SLAudioController *audioController;
 }
 
+@property(strong, nonatomic) UILabel* channelLLabel;
+@property(strong, nonatomic) UILabel* channelRLabel;
+
+@property(strong, nonatomic) UISlider* channelLSlider;
+@property(strong, nonatomic) UISlider* channelRSlider;
+
+
 
 @end
 

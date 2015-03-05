@@ -54,6 +54,10 @@
     return 0.0;
 }
 
+-(float)getFrequency{
+    return frequency;
+}
+
 -(double)map:(double)value inputMin:(double)inputMin inputMax:(double)inputMax outputMin:(double)outputMin outputMax:(double)outputMax{
     //implementation borrowed from openframeworks. thx for being open source! ;)
     if (fabs(inputMin - inputMax) < FLT_EPSILON){

@@ -139,7 +139,7 @@ OSStatus renderAudioOutput(void *inRefCon, AudioUnitRenderActionFlags *ioActionF
 
 -(void)randomBinaural{
     
-    int leftFrequency = [self getRandomNumberBetween:60 to:600];
+    int leftFrequency = [self getRandomNumberBetween:60 to:1000];
     int rightFrequency = leftFrequency - [self getRandomNumberBetween:1 to:30];
     
     [oscillatorLeft setFrequency:leftFrequency];
@@ -152,6 +152,13 @@ OSStatus renderAudioOutput(void *inRefCon, AudioUnitRenderActionFlags *ioActionF
     return (int)from + arc4random() % (to-from+1);
 }
 
+-(float)getOscillatorLeftFrequency{
+    return [oscillatorLeft getFrequency];
+}
+
+-(float)getOscillatorRightFrequency{
+    return [oscillatorRight getFrequency];
+}
 
 
 @end

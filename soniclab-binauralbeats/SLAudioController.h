@@ -39,6 +39,9 @@ SLOscillator* oscillatorRight;
 -(void)changeChannelRFrequency:(float)frequency;
 -(void)randomBinaural;
 -(int)getRandomNumberBetween:(int)from to:(int)to;
+-(float)getOscillatorLeftFrequency;
+-(float)getOscillatorRightFrequency;
+
 
 
 

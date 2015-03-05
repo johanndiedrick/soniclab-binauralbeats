@@ -37,24 +37,33 @@
     [self.view addSubview:playbackToggleButton];
     
     // Add a slider to adjust left oscillator frequency
-    UISlider* channelLSlider = [[UISlider alloc] initWithFrame:CGRectMake(10, 60, self.view.frame.size.width, 20)];
-    [channelLSlider addTarget:self action:@selector(channelLSliderValueChanged:) forControlEvents:UIControlEventValueChanged];
-    [channelLSlider setMinimumValue:60];
-    [channelLSlider setMaximumValue:600];
-    [channelLSlider setContinuous:YES];
-    [self.view addSubview:channelLSlider];
+    _channelLSlider = [[UISlider alloc] initWithFrame:CGRectMake(10, 100, self.view.frame.size.width-10, 20)];
+    [_channelLSlider addTarget:self action:@selector(channelLSliderValueChanged:) forControlEvents:UIControlEventValueChanged];
+    [_channelLSlider setMinimumValue:60];
+    [_channelLSlider setMaximumValue:1000];
+    [_channelLSlider setContinuous:YES];
+    [self.view addSubview:_channelLSlider];
+    
+    _channelLLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 120, 100, 30)];
+    [_channelLLabel setText:[NSString stringWithFormat:@"%i hz", (int)[audioController getOscillatorLeftFrequency]]];
+    [self.view addSubview:_channelLLabel];
+    
     
     // Add a slider to adjust left oscillator frequency
-    UISlider* channelRSlider = [[UISlider alloc] initWithFrame:CGRectMake(10, 90, self.view.frame.size.width, 20)];
-    [channelRSlider addTarget:self action:@selector(channelRSliderValueChanged:) forControlEvents:UIControlEventValueChanged];
-    [channelRSlider setMinimumValue:60];
-    [channelRSlider setMaximumValue:600];
-    [channelRSlider setContinuous:YES];
-    [self.view addSubview:channelRSlider];
+    _channelRSlider = [[UISlider alloc] initWithFrame:CGRectMake(10, 200, self.view.frame.size.width-10, 20)];
+    [_channelRSlider addTarget:self action:@selector(channelRSliderValueChanged:) forControlEvents:UIControlEventValueChanged];
+    [_channelRSlider setMinimumValue:60];
+    [_channelRSlider setMaximumValue:1000];
+    [_channelRSlider setContinuous:YES];
+    [self.view addSubview:_channelRSlider];
+    
+    _channelRLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 220, 100, 30)];
+    [_channelRLabel setText:[NSString stringWithFormat:@"%i hz", (int)[audioController getOscillatorRightFrequency]]];
+    [self.view addSubview:_channelRLabel];
     
     //  Add a button to generate a random binaural range
     UIButton* randomBinauralButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [randomBinauralButton setFrame:CGRectMake(20, 200, 280, 80)];
+    [randomBinauralButton setFrame:CGRectMake(20, 300, 280, 80)];
     [randomBinauralButton setTitle:@"Random Binaural" forState:UIControlStateNormal];
     [randomBinauralButton addTarget:self action:@selector(getRandomBinaural:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:randomBinauralButton];
@@ -70,6 +79,9 @@
     UISlider *slider = (UISlider*)sender;
     float value = slider.value;
     [audioController changeChannelLFrequency:value];
+    
+    [_channelLLabel setText:[NSString stringWithFormat:@"%i hz", (int)[audioController getOscillatorLeftFrequency]]];
+
 }
 
 -(void)channelRSliderValueChanged:(id)sender{
@@ -77,11 +89,17 @@
     float value = slider.value;
     [audioController changeChannelRFrequency:value];
     
+    [_channelRLabel setText:[NSString stringWithFormat:@"%i hz", (int)[audioController getOscillatorRightFrequency]]];
+    
 }
 
 -(void)getRandomBinaural:(id)sender{
     [audioController randomBinaural];
-    
+    [_channelLLabel setText:[NSString stringWithFormat:@"%i hz", (int)[audioController getOscillatorLeftFrequency]]];
+    [_channelRLabel setText:[NSString stringWithFormat:@"%i hz", (int)[audioController getOscillatorRightFrequency]]];
+    [_channelLSlider setValue:[audioController getOscillatorLeftFrequency] animated:YES];
+    [_channelRSlider setValue:[audioController getOscillatorRightFrequency] animated:YES];
+
 }
 
 

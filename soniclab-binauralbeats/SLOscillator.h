@@ -34,5 +34,6 @@ double osc_output;
 -(void)setType:(int)oscType;
 -(float*)getSine;
 -(double)getWaveTableSample;
+-(float)getFrequency;
 
 @end
