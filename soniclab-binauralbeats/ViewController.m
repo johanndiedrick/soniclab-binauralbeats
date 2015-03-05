@@ -24,10 +24,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    audioController = [[SLAudioController alloc] init];
-    [audioController createOscillators];
-    [audioController initAudioController];
-    [audioController startAudioUnit];
+    audioController = [[SLAudioController alloc] init]; // setup our audio controller
+    [audioController createOscillators]; // create our oscillators
+    [audioController initAudioController]; // initialize our audio controller
+    [audioController startAudioUnit]; // start our audio unit
     
     //  Add a button to the main view to toggle playback
     UIButton* playbackToggleButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -44,6 +44,7 @@
     [_channelLSlider setContinuous:YES];
     [self.view addSubview:_channelLSlider];
     
+    // Add label to display our left oscillator's frequency
     _channelLLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 120, 100, 30)];
     [_channelLLabel setText:[NSString stringWithFormat:@"%i hz", (int)[audioController getOscillatorLeftFrequency]]];
     [self.view addSubview:_channelLLabel];
@@ -57,6 +58,7 @@
     [_channelRSlider setContinuous:YES];
     [self.view addSubview:_channelRSlider];
     
+    // Add label to display our right oscillator's frequency
     _channelRLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 220, 100, 30)];
     [_channelRLabel setText:[NSString stringWithFormat:@"%i hz", (int)[audioController getOscillatorRightFrequency]]];
     [self.view addSubview:_channelRLabel];
@@ -72,33 +74,34 @@
 #pragma mark - Adjusting Oscillators
 
 -(void)togglePlayback   {
+    //turn play back on or off
     [audioController togglePlayback];
 }
 
 -(void)channelLSliderValueChanged:(id)sender{
     UISlider *slider = (UISlider*)sender;
     float value = slider.value;
-    [audioController changeChannelLFrequency:value];
+    [audioController changeChannelLFrequency:value]; // change the frequency of our left oscillator depending on slider value
     
-    [_channelLLabel setText:[NSString stringWithFormat:@"%i hz", (int)[audioController getOscillatorLeftFrequency]]];
+    [_channelLLabel setText:[NSString stringWithFormat:@"%i hz", (int)[audioController getOscillatorLeftFrequency]]]; // update the text
 
 }
 
 -(void)channelRSliderValueChanged:(id)sender{
     UISlider *slider = (UISlider*)sender;
     float value = slider.value;
-    [audioController changeChannelRFrequency:value];
+    [audioController changeChannelRFrequency:value]; // change the frequency of our right oscillator depending on slider value
     
-    [_channelRLabel setText:[NSString stringWithFormat:@"%i hz", (int)[audioController getOscillatorRightFrequency]]];
+    [_channelRLabel setText:[NSString stringWithFormat:@"%i hz", (int)[audioController getOscillatorRightFrequency]]]; // update the text
     
 }
 
 -(void)getRandomBinaural:(id)sender{
-    [audioController randomBinaural];
-    [_channelLLabel setText:[NSString stringWithFormat:@"%i hz", (int)[audioController getOscillatorLeftFrequency]]];
-    [_channelRLabel setText:[NSString stringWithFormat:@"%i hz", (int)[audioController getOscillatorRightFrequency]]];
-    [_channelLSlider setValue:[audioController getOscillatorLeftFrequency] animated:YES];
-    [_channelRSlider setValue:[audioController getOscillatorRightFrequency] animated:YES];
+    [audioController randomBinaural]; // generate a random binaural frequency range
+    [_channelLLabel setText:[NSString stringWithFormat:@"%i hz", (int)[audioController getOscillatorLeftFrequency]]]; // update the text
+    [_channelRLabel setText:[NSString stringWithFormat:@"%i hz", (int)[audioController getOscillatorRightFrequency]]]; // update the text
+    [_channelLSlider setValue:[audioController getOscillatorLeftFrequency] animated:YES]; // update our slider
+    [_channelRSlider setValue:[audioController getOscillatorRightFrequency] animated:YES]; // update our slider
 
 }
 

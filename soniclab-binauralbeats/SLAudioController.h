@@ -34,7 +34,7 @@ SLOscillator* oscillatorRight;
 -(void)togglePlayback;
 -(void)createOscillators;
 
-//changing oscillator frequency
+//getting/setting oscillator frequency
 -(void)changeChannelLFrequency:(float)frequency;
 -(void)changeChannelRFrequency:(float)frequency;
 -(void)randomBinaural;
