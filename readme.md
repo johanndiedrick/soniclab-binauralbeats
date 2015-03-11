@@ -50,12 +50,6 @@ During the workshop, we're going to work from a template project, where you can 
 
 * Create our UI and other niceties
 
-## To Do
-
-* Comment every line of code
-
-* Make a "finished" branch for reference and an "unfinished" branch to be used at the workshop
-
 ## References
 
 * https://github.com/zebpedersen/CAController
