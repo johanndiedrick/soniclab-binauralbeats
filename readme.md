@@ -10,11 +10,13 @@ In this 2-hour iOS workshop, we will create a simple application for creating bi
 
 ## Setting up you iOS Developer account
 
-1) Send Marlon (<me42@nyu.edu>) or T.K. (<tkbroderick@gmail.com>) your email address.
+1) Send Marlon (<me42@nyu.edu>) or your email address.
 
 2) In the email, tell them what kind of device you have (iPhone, iPod or iPad), and the device's UDID. Instructions on finding your devices UDID can be found here:
 
 http://www.macworld.co.uk/how-to/iphone/how-find-out-your-iphone-or-ipad-udid-3530239/
+
+3) Download and install the latest version of XCode, and try to build an example project on your iOS device (or in the simulator at the very least)
 
 ## Instructions:
 
