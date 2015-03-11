@@ -4,6 +4,10 @@
 ### Friday March 13, 2015 | 7:30pm - 9:30pm EST
 ### Interactive Telecommunications Program, 721 Broadway, New York, NY
 
+## Presentation
+
+[Binaural Beats on iOS](http://jdiedrick.github.io/soniclab-binauralbeats/)
+
 ## Description
 
 In this 2-hour iOS workshop, we will create a simple application for creating binaural beats. There will be a super quick introduction to binaural beats, followed by an introduction to iOS development and Core Audio, the foundational framework for digital audio on iOS and OS X. We will touch on creating interfaces and classes, as well as walk through some fundamental concepts for generating digital audio. Having taken ICM should be more than enough to keep up. Having a iOS Developer Account is required to build the application on your phone. You should be able to build in the iOS Simulator without an iOS developer account however.
