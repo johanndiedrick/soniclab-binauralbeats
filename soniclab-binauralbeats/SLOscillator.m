@@ -12,7 +12,6 @@
 
 -(void) setup:(int)newSampleRate{
     sampleRate = newSampleRate;
-    type = sineWave;
     render_output = (float*) malloc(sizeof(float*[2]));
     osc_output = 0.0f;
 }
@@ -26,9 +25,6 @@
     phaseAdder = 2.0 * M_PI * frequency / sampleRate;
 }
 
--(void) setType:(int)oscType{
-    type = oscType;
-}
 
 -(float*)getSine{
     

@@ -118,14 +118,12 @@ OSStatus renderAudioOutput(void *inRefCon, AudioUnitRenderActionFlags *ioActionF
     oscillatorLeft = [[SLOscillator alloc] init];
     [oscillatorLeft setup:sampleRate];
     [oscillatorLeft setFrequency:450.0];
-    [oscillatorLeft setType:sineWave];
     [oscillatorLeft setVolume:0.25];
     [oscillatorLeft updateWaveform:waveformResolution];
 
     oscillatorRight = [[SLOscillator alloc] init];
     [oscillatorRight setup:sampleRate];
     [oscillatorRight setFrequency:440.0];
-    [oscillatorRight setType:sineWave];
     [oscillatorRight setVolume:0.25];
     [oscillatorRight updateWaveform:waveformResolution];
 
