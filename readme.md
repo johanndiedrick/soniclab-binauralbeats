@@ -83,3 +83,11 @@ During the workshop, we're going to work from a template project, where you can 
 * http://stackoverflow.com/questions/22221948/use-of-undeclared-identifier-objective-c-code
 
 * http://publications.gbdirect.co.uk/c_book/chapter5/sizeof_and_malloc.html
+
+* https://www.youtube.com/watch?v=Av202ZZPPII
+
+* http://www.amazon.com/Learning-Core-Audio-Hands-On-Programming/dp/032163684
+
+* https://developer.apple.com/library/mac/documentation/MusicAudio/Conceptual/CoreAudioOverview/WhatisCoreAudio/WhatisCoreAudio.html#//apple_ref/doc/uid/TP40003577-CH3-SW148
+
+* https://github.com/openframeworks/ofBook/blob/master/chapters/sound/chapter.md
