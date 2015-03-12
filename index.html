@@ -1,33 +1,210 @@
 <!doctype html>
 <head>
-<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+<script src="js/jquery-1.11.2.min.js"></script>
 <link rel="stylesheet" href="css/style.css"> 
 </head>
 <body>
 	<div class="topic" id="hello">
+		<br>
+		<br>
+		<br>
 		<p>Hello!</p>
+		<br>
+		<br>
+		<br>
 		<p>My name is Johann Diedrick</p>
+		<br>
+		<br>
+		<br>
 		<p>Nice to meet all of you ^_~</p>
-		<p><a href="#" id="hello">__</a></p>
+		<br>
+		<br>
+		<br>
+		<p><a href="#" id="hello_link">*</a></p>
 	</div>
 	<div class="topic" id="me">
+		<br>
+		<br>
+		<br>
 		<p>I'm a recent ITP alum (2013!)</p>
-		<p>I make sound installations, experimental performances, and audio software systems.<p>
-		<p>I currently work as a software developer, and I'm working on a couple of sound/music iOS apps.</p>
-		<p><a href="#" id="me">__</a></p>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<p>I make sound installations, experimental performances,</p>
+		<br>
+		<br>
+		<br>
+		<p>and audio software systems.</p>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<p>I currently work as a software developer,</p>
+		<br>
+		<br>
+		<br>
+		<p>and I'm working on a couple of sound/music iOS apps.</p>
+		<br>
+		<br>
+		<br>
+		<p><a href="#" id="me_link">*</a></p>
 	</div>
 	<div class="topic" id="overview">
+		<br>
+		<br>
+		<br>
 		<p>Today I'm here to talk about programming for mobile devices.</p>
+		<br>
+		<br>
+		<br>
 		<p>We're going to look at programming audio on iOS.</p>
-		<p>Specifically, we're going to make an app that produces binaural beats.</p>
-		<p><a href="#" id="overview">__</a></p>
+		<br>
+		<br>
+		<br>
+		<p>Specifically, we're going to make an app</p>
+		<br>
+		<br>
+		<br>
+		<p>that produces binaural beats.</p>
+		<br>
+		<br>
+		<br>
+		<p><a href="#" id="overview-link">*</a></p>
 	</div>
 	<div class="topic" id="binaural-beats">
+		<br>
+		<br>
+		<br>
 		<p>What are binaural beats?</p>
+		<br>
+		<br>
+		<br>
 		<p>Binaural beats are a psycho-acoustic phenonemon.</p>
+		<br>
+		<br>
+		<br>
 		<p>They are produced when two audible frequencies, very close to each other, are heard in each ear.</p>
+		<br>
+		<br>
+		<br>
 		<p>The difference between the two frequencies is heard as a "beat"</p>
-		<p><a href="#" id="overview">__</a></p>
+		<br>
+		<br>
+		<br>
+		<p><a href="#" id="binaural-beats-link">*</a></p>
+	</div>
+	<div class="topic" id="youtube-explaination">
+		<br>
+		<br>
+		<br>
+		<iframe width="640" height="360" src="https://www.youtube.com/embed/v4csQWOJPig?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+		<br>
+		<br>
+		<br>
+		<p><a href="#" id="binaural-beats-link">*</a></p>
+	</div>
+	<div class="topic" id="question">
+		<br>
+		<br>
+		<br>
+		<p>So how are we going to create binaural beats?</p>
+		<br>
+		<br>
+		<br>
+		<p><a href="#" id="binaural-beats-link">*</a></p>
+	</div>
+	<div class="topic" id="question">
+		<br>
+		<br>
+		<br>
+		<p>Programming!</p>
+		<br>
+		<br>
+		<br>
+		<p><a href="#" id="binaural-beats-link">*</a></p>
+	</div>
+	<div class="topic" id="question">
+		<br>
+		<br>
+		<br>
+		<p>What is Core Audio?</p>
+		<br>
+		<br>
+		<br>
+		<p>From Apple's documentation:!</p>
+		<br>
+		<br>
+		<br>
+		<p>"Core Audio is the digital audio infrastructure of iOS and OS X. It includes a set of software frameworks designed to handle the audio needs in your applications."
+		<br>
+		<br>
+		<br>
+		<p><a href="#" id="binaural-beats-link">*</a></p>
+	</div>
+	<div class="topic" id="question">
+		<br>
+		<br>
+		<br>
+		<p>For us, we will focus on Audio Units</p>
+		<br>
+		<br>
+		<br>
+		<p>Audio Units let us create audio data and generate sound</p>
+		<br>
+		<br>
+		<br>
+		<p>More technically, we can create samples and put them into output buffers.
+		<br>
+		<br>
+		<br>
+		<p><a href="#" id="binaural-beats-link">*</a></p>
+	</div>
+	<div class="topic" id="question">
+		<br>
+		<br>
+		<br>
+		<p>Let's look at the repo on Github and start coding!</p>
+		<br>
+		<br>
+		<br>
+		<p><a href="#" id="binaural-beats-link">*</a></p>
+	</div>
+	<div class="topic" id="references">
+		<br>
+		<br>
+		<br>
+		<p>Learning Core Audio by Chris Adamson and Kevin Avila</p>
+		<br>
+		<br>
+		<br>
+		<p><a href="https://github.com/openframeworks/ofBook/blob/master/chapters/sound/chapter.md">Sound</a> chapter in ofBook by Adam Carlucci</p>
+		<br>
+		<br>
+		<br>
+		<p><a href="#" id="binaural-beats-link">*</a></p>
+	</div>
+	<div class="topic" id="thank-you">
+		<br>
+		<br>
+		<br>
+		<p>Thank you!</p>
+		<br>
+		<br>
+		<br>
+		<p>@jdiedrick</p>
+		<br>
+		<br>
+		<br>
+		<p>http://www.johanndiedrick.com</p>
+		<br>
+		<br>
+		<br>
+		<p><a href="#" id="binaural-beats-link">*</a></p>
 	</div>
 </body>
 <script src="js/script.js"></script>

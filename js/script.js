@@ -1,7 +1,7 @@
 
 $("document").ready(function(){
 
-	$('a#hello').click(function(){
+	$('a#hello_link').click(function(){
 	
 		$('html, body').animate({
 			scrollTop: $("#me").offset().top
@@ -10,7 +10,7 @@ $("document").ready(function(){
 	});
 
 	
-	$('a#me').click(function(){
+	$('a#me_link').click(function(){
 	
 		$('html, body').animate({
 			scrollTop: $("#overview").offset().top
@@ -18,10 +18,10 @@ $("document").ready(function(){
 		return false;	
 	});
 	
-	$('a#overview').click(function(){
+	$('a#overview-link').click(function(){
 		
 		$('html, body').animate({
-			scrollTop: $("div#hello").offset().top
+			scrollTop: $("div#binaural-beats").offset().top
 		}, 2000);
 		return false;
 	});
