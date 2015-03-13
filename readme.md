@@ -1,5 +1,7 @@
 # Binaural Beats on iOS Workshop
 
+![bb](http://i.imgur.com/RypH7hx.jpg)
+
 ### Sonic Lab
 ### Friday March 13, 2015 | 7:30pm - 9:30pm EST
 ### Interactive Telecommunications Program, 721 Broadway, New York, NY
