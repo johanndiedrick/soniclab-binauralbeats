@@ -40,7 +40,7 @@ During the workshop, we're going to work from a template project, where you can 
 
 ### Order of tasks 
 
-* Describe and Create our AudioUnit 
+* Describe and create our AudioUnit 
 
 * Create our oscillator class
 
