@@ -15,6 +15,7 @@
 
 @property(strong, nonatomic) UILabel* channelLLabel;
 @property(strong, nonatomic) UILabel* channelRLabel;
+@property(strong, nonatomic) UILabel* binauralBeatFrequency;
 
 @property(strong, nonatomic) UISlider* channelLSlider;
 @property(strong, nonatomic) UISlider* channelRSlider;

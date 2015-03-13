@@ -63,6 +63,10 @@
     [_channelRLabel setText:[NSString stringWithFormat:@"%i hz", (int)[audioController getOscillatorRightFrequency]]];
     [self.view addSubview:_channelRLabel];
     
+    // Add label to display our binaural beat's frequency
+    _binauralBeatFrequency = [[UILabel alloc] initWithFrame:CGRectMake(10, 260, self.view.frame.size.width, 30)];
+    [_binauralBeatFrequency setText:[NSString stringWithFormat:@" Binaural Beat Frequency: %i hz", abs((int)[audioController getOscillatorRightFrequency] - (int)[audioController getOscillatorLeftFrequency] )]];    [self.view addSubview:_binauralBeatFrequency];
+    
     //  Add a button to generate a random binaural range
     UIButton* randomBinauralButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [randomBinauralButton setFrame:CGRectMake(20, 300, 280, 80)];
@@ -84,6 +88,7 @@
     [audioController changeChannelLFrequency:value]; // change the frequency of our left oscillator depending on slider value
     
     [_channelLLabel setText:[NSString stringWithFormat:@"%i hz", (int)[audioController getOscillatorLeftFrequency]]]; // update the text
+    [_binauralBeatFrequency setText:[NSString stringWithFormat:@" Binaural Beat Frequency: %i hz", abs((int)[audioController getOscillatorRightFrequency] - (int)[audioController getOscillatorLeftFrequency] )]];
 
 }
 
@@ -93,6 +98,7 @@
     [audioController changeChannelRFrequency:value]; // change the frequency of our right oscillator depending on slider value
     
     [_channelRLabel setText:[NSString stringWithFormat:@"%i hz", (int)[audioController getOscillatorRightFrequency]]]; // update the text
+    [_binauralBeatFrequency setText:[NSString stringWithFormat:@" Binaural Beat Frequency: %i hz", abs((int)[audioController getOscillatorRightFrequency] - (int)[audioController getOscillatorLeftFrequency] )]];
     
 }
 
@@ -102,6 +108,7 @@
     [_channelRLabel setText:[NSString stringWithFormat:@"%i hz", (int)[audioController getOscillatorRightFrequency]]]; // update the text
     [_channelLSlider setValue:[audioController getOscillatorLeftFrequency] animated:YES]; // update our slider
     [_channelRSlider setValue:[audioController getOscillatorRightFrequency] animated:YES]; // update our slider
+    [_binauralBeatFrequency setText:[NSString stringWithFormat:@" Binaural Beat Frequency: %i hz", abs((int)[audioController getOscillatorRightFrequency] - (int)[audioController getOscillatorLeftFrequency] )]];
 
 }
 
