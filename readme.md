@@ -10,7 +10,7 @@
 
 ## Description
 
-In this 2-hour iOS workshop, we will create a simple application for creating binaural beats. There will be a super quick introduction to binaural beats, followed by an introduction to iOS development and Core Audio, the foundational framework for digital audio on iOS and OS X. We will touch on creating interfaces and classes, as well as walk through some fundamental concepts for generating digital audio. Having taken ICM should be more than enough to keep up. Having a iOS Developer Account is required to build the application on your phone. You should be able to build in the iOS Simulator without an iOS developer account however.
+In this 2-hour iOS workshop, we will create a simple application for creating binaural beats. There will be a super quick introduction to binaural beats, followed by an introduction to iOS development and Core Audio, the foundational framework for digital audio on iOS and OS X. We will touch on creating interfaces and classes, as well as walk through some fundamental concepts for generating digital audio. Having taken ICM should be more than enough to keep up. Having a iOS Developer Account is required to build the application on your phone. 
 
 ## Setting up you iOS Developer account
 
@@ -20,11 +20,13 @@ In this 2-hour iOS workshop, we will create a simple application for creating bi
 
 http://www.macworld.co.uk/how-to/iphone/how-find-out-your-iphone-or-ipad-udid-3530239/
 
-3) Download and install the latest version of XCode, and try to build an example project on your iOS device (or in the simulator at the very least)
+3) Download and install the latest version of XCode, and try to build an blank example project on your iOS device
 
 ## Instructions:
 
 During the workshop, we're going to work from a template project, where you can "fill in the blanks" as we we walk through building the application. The instructions below outline what we will be doing.
+
+### Setup
 
 1) Download/clone repo
 
@@ -36,23 +38,13 @@ During the workshop, we're going to work from a template project, where you can 
 
 3) Import AudioUnit Headers
 
-* Two things we are responsible for setting up:
-
-	a) How we render our sound (via sine waves)
-
-	b) Describe and create out AudioUnit
-
-	c) Creating a synthesizer class
-
-	d) Setting up a simple UI
-
 ### Order of tasks 
 
-* Create our AudioUnit
+* Describe and Create our AudioUnit 
 
 * Create our oscillator class
 
-* Render our sound
+* Render our sound via sine waves
 
 * Create our UI and other niceties
 
