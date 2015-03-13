@@ -29,6 +29,66 @@ a{
 
 #me{
 	background-repeat: no-repeat;
-	background-image: url('http://www.johanndiedrick.com/static/img/strings_dumbo.jpg?v=3235e');
+	background-image: url('../img/strings.jpg');
+	background-size: cover;
+}
+
+#overview{
+	background-repeat: no-repeat;
+	background-image: url('../img/miku.jpg');
+	background-size: cover;
+}
+
+#binaural-beats{
+	background-repeat: no-repeat;
+	background-image: url('../img/bb.jpg');
+	background-size: cover;
+}
+
+#youtube-explaination{
+	background-repeat: no-repeat;
+	background-image: url('../img/bb.jpg');
+	background-size: cover;
+}
+
+#question{
+	background-repeat: no-repeat;
+	background-image: url('../img/bb1.png');
+	background-size: cover;
+}
+
+#programming{
+	background-repeat: no-repeat;
+	background-image: url('../img/programming.png');
+	background-size: cover;
+}
+
+#coreaudio{
+	background-repeat: no-repeat;
+	background-image: url('../img/coreaudio2.png');
+	background-size: cover;
+}
+
+#audiounits{
+	background-repeat: no-repeat;
+	background-image: url('../img/audiounits.jpg');
+	background-size: cover;
+}
+
+#start{
+	background-repeat: no-repeat;
+	background-image: url('../img/start.jpg');
+	background-size: cover;
+}
+
+#references{
+	background-repeat: no-repeat;
+	background-image: url('../img/resources.jpg');
+	background-size: cover;
+}
+
+#thank-you{
+	background-repeat: no-repeat;
+	background-image: url('../img/catface.jpg');
 	background-size: cover;
 }
