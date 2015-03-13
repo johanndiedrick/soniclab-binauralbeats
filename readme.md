@@ -83,3 +83,5 @@ During the workshop, we're going to work from a template project, where you can 
 * https://developer.apple.com/library/mac/documentation/MusicAudio/Conceptual/CoreAudioOverview/WhatisCoreAudio/WhatisCoreAudio.html#//apple_ref/doc/uid/TP40003577-CH3-SW148
 
 * https://github.com/openframeworks/ofBook/blob/master/chapters/sound/chapter.md
+
+* http://www.subfurther.com/blog/
